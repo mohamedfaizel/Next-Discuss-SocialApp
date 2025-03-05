@@ -5,10 +5,18 @@ github oAuth
 
 npx create-next-app@latest
 npm install @heroui/react framer-motion
+<!-- tailwindcss v4 not support Hero ui 
+So we need to downgrade tailwindcss 3
+npm install tailwindcss@3 -D
+npm install postcss@8 -D --need to check manuall added now
+tailwind.config.ts - added
+postcss.config.mjs - modified --need to check
+globals.css add this below line
+@source "../../node_modules/@heroui";
+ -->
 
 
 <!-- Provider.tsx -->
-<!-- In thia PP hERO UI COMPONENT NOT WORKING -->
 import {HeroUIProvider} from "@heroui/react";
 import {Button, Input} from "@heroui/react";
 
