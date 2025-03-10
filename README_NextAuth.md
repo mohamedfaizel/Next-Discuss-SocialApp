@@ -4,7 +4,19 @@ github oAuth
 
 
 npx create-next-app@latest
+npm install @nextui-org/react framer-motion
+
+<!-- Her ui not working properly -->
 npm install @heroui/react framer-motion
+<!-- tailwind.config.ts -->
+import { nextui } from '@nextui-org/react';
+content: [...,'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',]
+plugins: [nextui()],
+
+<!-- provider.ts / App.ts-->
+import {NextUIProvider} from "@nextui-org/react";
+<NextUIProvider>...</NextUIProvider>
+
 <!-- tailwindcss v4 not support Hero ui 
 So we need to downgrade tailwindcss 3
 npm install tailwindcss@3 -D
@@ -17,8 +29,8 @@ globals.css add this below line
 
 
 <!-- Provider.tsx -->
-import {HeroUIProvider} from "@heroui/react";
-import {Button, Input} from "@heroui/react";
+import {NextUIProvider} from "@nextui-org/react";
+import {Button, Input} from "@nextui-org/react";
 
 npm install prisma
 npx prisma init --datasource-provider sqlite

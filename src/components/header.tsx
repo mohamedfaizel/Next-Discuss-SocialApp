@@ -5,7 +5,7 @@ import {
   NavbarContent,
   NavbarItem,
   Input,
-} from '@heroui/react';
+} from '@nextui-org/react';
 import HeaderAuth from '@/components/header-auth';
 
 export default function Header() {

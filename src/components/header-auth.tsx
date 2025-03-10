@@ -12,7 +12,7 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-} from '@heroui/react';
+} from '@nextui-org/react';
 import { useSession } from 'next-auth/react';
 import * as actions from '@/actions';
 
